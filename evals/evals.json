@@ -1,0 +1,23 @@
+{
+  "skill_name": "giga-this-ui",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have a basic React + Tailwind dashboard with a navbar, some stat cards, and a data table. /giga-this-ui — transform the whole thing into the Gigaverse design system. The project is at ./test-projects/dashboard-app",
+      "expected_output": "All components restyled with Gigaverse tokens: navy background, gold/teal accents, bitcell/m5x7 fonts, giga card variants, themed navbar, animation variants created",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "giga this ui — I want my landing page to look like it belongs in the Gigaverse. It's a simple hero + features + CTA layout built with React and Tailwind. Project at ./test-projects/landing-page",
+      "expected_output": "Landing page transformed: hero with bitcell heading, gold CTA button with gradient/shimmer, feature cards as giga standard cards, section dividers, scroll-triggered animations, responsive at all breakpoints",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "make it giga — I have a settings page with forms, modals, and toggle switches. React + Tailwind project at ./test-projects/settings-page. Apply the gigaverse design system to all of it",
+      "expected_output": "Forms restyled with giga input pattern (transparent bg, border-2, bitcell font), modals use LandingModalShell pattern (overlay + panel + gradient header), toggles themed with giga colors, all text uses correct font hierarchy",
+      "files": []
+    }
+  ]
+}
