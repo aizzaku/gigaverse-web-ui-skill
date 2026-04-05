@@ -5,6 +5,13 @@ A Claude Code skill that transforms any React + Tailwind project into the [Gigav
 ## Install
 
 ```bash
+npx skills add aizzaku/gigaverse-web-ui-skill
+```
+
+Works across Claude Code, Cursor, Copilot, Windsurf, and 15+ other agents.
+
+Claude Code only:
+```bash
 npx claude install aizzaku/gigaverse-web-ui-skill
 ```
 
