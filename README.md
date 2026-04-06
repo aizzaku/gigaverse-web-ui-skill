@@ -39,6 +39,25 @@ Runs a 5-phase transformation:
 
 The skill is fully self-contained — no external dependencies:
 
-- `SKILL.md` — skill instructions and inline token reference
-- `references/DESIGN_SYSTEM.md` — full component specs
-- `references/demo/` — 7 live HTML reference pages (colors, typography, buttons, cards, inputs, layout)
+- `SKILL.md` — skill workflow (5-phase transformation process)
+- `references/DESIGN_SYSTEM.md` — complete design system spec in 9 sections:
+  1. Visual Theme & Atmosphere
+  2. Color Palette & Roles
+  3. Typography Rules
+  4. Component Catalog (with interaction states)
+  5. Layout Principles (with responsive breakpoints)
+  6. Depth & Elevation
+  7. Animation System
+  8. Do's and Don'ts
+  9. Agent Prompt Guide
+- `references/demo/` — 9 live HTML reference pages:
+  - `colors.html` — all color tokens with swatches
+  - `typography.html` — Bitcell heading scale + m5x7 body scale
+  - `buttons.html` — all button variants with shimmer animation
+  - `cards.html` — all card variants
+  - `inputs.html` — input states, status pips, ping-pong loader, progress bar
+  - `layout.html` — layout patterns, animation variants, spacing system
+  - `states.html` — every interactive component in all 5 states (default/hover/focus/active/disabled)
+  - `templates.html` — page template skeletons (landing section, legal page, splash panel)
+- `references/demo/tokens.css` — all design tokens as CSS custom properties (inspectable via `getComputedStyle`)
+- `references/demo/shared-config.js` — shared Tailwind CDN config for demo pages

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08 — Page Templates | GIGAVERSE Design System</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+  <link rel="stylesheet" href="tokens.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="shared-config.js"></script>
+  <style>
+    .template-frame {
+      border: 1px solid rgba(4,131,171,0.2);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #060b14;
+    }
+    .template-label {
+      font-family: 'VT323', monospace;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #7a8a9e;
+      margin-bottom: 8px;
+    }
+    .placeholder-block {
+      background: rgba(4,131,171,0.08);
+      border: 1px dashed rgba(4,131,171,0.2);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #7a8a9e;
+      font-family: 'VT323', monospace;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+    }
+  </style>
+</head>
+<body class="bg-giga-navy min-h-screen font-bitcell text-white">
+
+  <nav class="flex items-center gap-6 px-12 py-4 text-sm tracking-wider">
+    <a href="index.html" class="text-giga-muted hover:text-giga-gold transition-colors">COVER</a>
+    <a href="colors.html" class="text-giga-muted hover:text-giga-gold transition-colors">COLORS</a>
+    <a href="typography.html" class="text-giga-muted hover:text-giga-gold transition-colors">TYPOGRAPHY</a>
+    <a href="buttons.html" class="text-giga-muted hover:text-giga-gold transition-colors">BUTTONS</a>
+    <a href="cards.html" class="text-giga-muted hover:text-giga-gold transition-colors">CARDS</a>
+    <a href="inputs.html" class="text-giga-muted hover:text-giga-gold transition-colors">INPUTS</a>
+    <a href="layout.html" class="text-giga-muted hover:text-giga-gold transition-colors">LAYOUT</a>
+    <a href="states.html" class="text-giga-muted hover:text-giga-gold transition-colors">STATES</a>
+    <a href="templates.html" class="text-giga-gold">TEMPLATES</a>
+  </nav>
+
+  <main class="px-12 py-8 max-w-[1400px]">
+
+    <h1 class="text-[42px] tracking-[3px] text-giga-heading mb-2">PAGE TEMPLATES</h1>
+    <p class="text-giga-muted text-[14px] tracking-[2px] mb-12">STRUCTURAL SKELETONS FOR COMMON PAGE TYPES</p>
+
+    <!-- Template 1: Landing Section -->
+    <section class="mb-20">
+      <h2 class="text-[22px] tracking-[2px] text-giga-gold mb-2">LANDING SECTION</h2>
+      <p class="text-giga-muted text-[13px] tracking-[1.5px] mb-6">SNAP-SCROLL SECTION WITH AMBIENT PIXELS, SECTION HEADER, AND TWO-COLUMN GRID</p>
+
+      <div class="template-frame">
+        <!-- Simulated Navbar -->
+        <div class="flex items-center justify-between px-6 h-[52px] bg-giga-navy/92 border-b border-giga-border">
+          <span class="font-bitcell text-[14px] tracking-[2px] text-giga-gold">GIGAVERSE</span>
+          <div class="flex gap-6">
+            <span class="font-bitcell text-[13px] tracking-[1.8px] text-giga-gold border-b-2 border-giga-gold pb-1">HOME</span>
+            <span class="font-bitcell text-[13px] tracking-[1.8px] text-giga-muted">CUSTOMIZE</span>
+            <span class="font-bitcell text-[13px] tracking-[1.8px] text-giga-muted">FACTIONS</span>
+            <span class="font-bitcell text-[13px] tracking-[1.8px] text-giga-muted">DUNGEONS</span>
+          </div>
+          <div class="w-8 h-8 rounded-full bg-giga-card border border-giga-border"></div>
+        </div>
+
+        <!-- Section Content -->
+        <div class="relative px-6 py-10 sm:px-8 lg:px-10" style="min-height: 400px;">
+          <!-- Ambient pixels (decorative dots) -->
+          <div class="absolute top-8 left-16 w-[6px] h-[6px] bg-giga-gold/40 rounded-sm" style="box-shadow: 0 0 10px rgba(245,197,99,0.3);"></div>
+          <div class="absolute top-20 right-24 w-[5px] h-[5px] bg-giga-cyan/30 rounded-sm" style="box-shadow: 0 0 10px rgba(2,199,215,0.2);"></div>
+          <div class="absolute bottom-16 left-32 w-[7px] h-[7px] bg-giga-gold/25 rounded-sm" style="box-shadow: 0 0 10px rgba(245,197,99,0.2);"></div>
+
+          <div class="relative z-10 mx-auto max-w-[1440px]">
+            <!-- Section Header -->
+            <div class="text-center mb-8">
+              <div class="flex items-center justify-center gap-3 mb-2">
+                <div class="h-[2px] w-10" style="background: #0483AB;"></div>
+                <span class="font-bitcell text-[11px] tracking-[2px]" style="color: #0483AB;">02 — CUSTOMIZE</span>
+                <div class="h-[2px] w-10" style="background: #0483AB;"></div>
+              </div>
+              <h2 class="font-bitcell text-[24px] tracking-[2px] text-giga-heading sm:text-[34px]">BUILD YOUR CHARACTER</h2>
+              <p class="mt-2 max-w-[780px] mx-auto font-m5x7 text-[17px] leading-[1.35] text-giga-muted">Customize your avatar with unique equipment, skins, and accessories earned through gameplay.</p>
+            </div>
+
+            <!-- Two-Column Grid -->
+            <div class="grid gap-4 xl:grid-cols-[minmax(280px,380px)_minmax(0,1fr)]">
+              <!-- Left Column: Text + Features -->
+              <div class="flex flex-col gap-4">
+                <div class="border-l-2 border-giga-cyan pl-4">
+                  <p class="font-m5x7 text-[17px] leading-[1.35] text-gray-200">Each piece of equipment changes your character's appearance and stats in real-time.</p>
+                </div>
+                <div class="flex flex-col gap-3">
+                  <div class="flex items-center gap-3">
+                    <div class="w-4 h-4 rounded-sm" style="background: #0483AB;"></div>
+                    <span class="font-m5x7 text-[17px] text-gray-300">Pixel-perfect character rendering</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="w-4 h-4 rounded-sm" style="background: #0483AB;"></div>
+                    <span class="font-m5x7 text-[17px] text-gray-300">Equipment affects gameplay stats</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="w-4 h-4 rounded-sm" style="background: #0483AB;"></div>
+                    <span class="font-m5x7 text-[17px] text-gray-300">Trade items on the marketplace</span>
+                  </div>
+                </div>
+                <button class="self-start rounded-md border-2 border-giga-gold font-bitcell font-bold text-giga-button-text px-5 py-1.5 text-[16px] tracking-[1.8px]"
+                  style="background: linear-gradient(180deg, #ffe070 0%, #f0c040 48%, #d8a020 52%, #c08010 100%); box-shadow: inset 0 1px 0 rgba(255,245,204,0.45), 0 2px 0 0 rgba(0,0,0,0.4);">
+                  CUSTOMIZE NOW
+                </button>
+              </div>
+
+              <!-- Right Column: Content Area -->
+              <div class="placeholder-block h-[280px]">
+                SPRITE PREVIEW / IMAGE CONTENT
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section Divider -->
+        <div class="mx-auto w-full max-w-[1400px] px-6 sm:px-8 lg:px-10">
+          <div class="h-px w-full bg-gradient-to-r from-transparent via-giga-teal to-transparent opacity-40"></div>
+        </div>
+
+        <!-- Simulated Footer -->
+        <div class="flex items-center justify-between px-6 h-[56px] bg-giga-panel/95 border-t border-giga-border">
+          <span class="font-bitcell text-[14px] tracking-[1.5px] text-giga-muted">COLLECTIONS</span>
+          <div class="flex gap-4">
+            <div class="w-4 h-4 rounded-sm bg-giga-muted/40"></div>
+            <div class="w-4 h-4 rounded-sm bg-giga-muted/40"></div>
+            <div class="w-4 h-4 rounded-sm bg-giga-muted/40"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Template 2: Legal Page -->
+    <section class="mb-20">
+      <h2 class="text-[22px] tracking-[2px] text-giga-gold mb-2">LEGAL PAGE</h2>
+      <p class="text-giga-muted text-[13px] tracking-[1.5px] mb-6">TERMS OF SERVICE / PRIVACY POLICY — NARROW PROSE LAYOUT</p>
+
+      <div class="template-frame">
+        <div class="px-6 py-12 sm:px-8 sm:py-16 mx-auto max-w-3xl">
+          <a href="#" class="font-bitcell text-[14px] tracking-[2px] text-giga-cyan">&larr; BACK TO GIGAVERSE</a>
+
+          <h1 class="mt-8 font-bitcell text-[28px] tracking-[2px] text-giga-heading sm:text-[36px]">TERMS OF SERVICE</h1>
+          <p class="mt-2 font-m5x7 text-[17px] text-giga-muted">Last Updated: April 2026</p>
+
+          <div class="mt-8 space-y-8 font-m5x7 text-[17px] leading-[1.5] text-gray-300 sm:text-[19px]">
+            <div>
+              <h2 class="font-bitcell text-[20px] tracking-[2px] text-giga-heading sm:text-[22px] mb-3">1. ACCEPTANCE OF TERMS</h2>
+              <p>By accessing or using the Gigaverse platform, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.</p>
+            </div>
+
+            <div class="border-t border-giga-border/40 pt-6">
+              <h2 class="font-bitcell text-[20px] tracking-[2px] text-giga-heading sm:text-[22px] mb-3">2. DIGITAL ASSETS</h2>
+              <p>All digital assets within the Gigaverse ecosystem are subject to the terms outlined in this agreement. Ownership of NFTs grants specific rights as described herein.</p>
+            </div>
+
+            <div class="border-t border-giga-border/40 pt-6">
+              <h2 class="font-bitcell text-[20px] tracking-[2px] text-giga-heading sm:text-[22px] mb-3">3. USER CONDUCT</h2>
+              <p>Users must adhere to community guidelines when interacting with other players. Violation of these guidelines may result in account restrictions.</p>
+            </div>
+          </div>
+
+          <div class="mt-12 border-t border-giga-border pt-6">
+            <a href="#" class="font-bitcell text-[14px] tracking-[2px] text-giga-cyan">&larr; BACK TO GIGAVERSE</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Template 3: Splash Panel -->
+    <section class="mb-20">
+      <h2 class="text-[22px] tracking-[2px] text-giga-gold mb-2">SPLASH PANEL</h2>
+      <p class="text-giga-muted text-[13px] tracking-[1.5px] mb-6">AUTHENTICATED USER GREETING — CENTERED WITH STATS GRID</p>
+
+      <div class="template-frame">
+        <div class="flex flex-col items-center justify-center px-6 py-16 text-center mx-auto max-w-[720px]">
+          <!-- Sprite placeholder -->
+          <div class="placeholder-block w-[192px] h-[192px] rounded-[20px] mb-6">SPRITE</div>
+
+          <h1 class="font-bitcell text-[36px] tracking-[2px] text-giga-heading sm:text-[48px]">WELCOME BACK</h1>
+          <p class="mt-1 font-bitcell text-[24px] tracking-[2px] text-giga-gold sm:text-[36px]">GIGAPLAYER_42</p>
+
+          <!-- Stats Grid -->
+          <div class="mt-8 w-full grid grid-cols-2 sm:grid-cols-4 border-y border-giga-border py-4 gap-4">
+            <div class="text-center">
+              <p class="font-bitcell text-[28px] tracking-wider text-giga-cyan">LVL 42</p>
+              <p class="font-bitcell text-[11px] tracking-[2px] text-giga-muted mt-1">LEVEL</p>
+            </div>
+            <div class="text-center">
+              <p class="font-bitcell text-[28px] tracking-wider text-giga-gold">1,247</p>
+              <p class="font-bitcell text-[11px] tracking-[2px] text-giga-muted mt-1">GOLD</p>
+            </div>
+            <div class="text-center">
+              <p class="font-bitcell text-[28px] tracking-wider text-giga-heading">89</p>
+              <p class="font-bitcell text-[11px] tracking-[2px] text-giga-muted mt-1">ITEMS</p>
+            </div>
+            <div class="text-center">
+              <p class="font-bitcell text-[28px] tracking-wider text-giga-green-light">12</p>
+              <p class="font-bitcell text-[11px] tracking-[2px] text-giga-muted mt-1">QUESTS</p>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="mt-8 flex gap-3">
+            <button class="rounded-md border-2 border-giga-gold font-bitcell font-bold text-giga-button-text px-8 py-2 text-[20px] tracking-[2px]"
+              style="background: linear-gradient(180deg, #ffe070 0%, #f0c040 48%, #d8a020 52%, #c08010 100%); box-shadow: inset 0 1px 0 rgba(255,245,204,0.45), 0 2px 0 0 rgba(0,0,0,0.4);">
+              ENTER WORLD
+            </button>
+            <button class="rounded-md border border-giga-cyan bg-giga-panel/80 font-bitcell tracking-[2px] text-giga-cyan px-6 py-2 text-[16px]">INVENTORY</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
